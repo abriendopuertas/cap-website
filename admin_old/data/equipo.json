@@ -1,0 +1,66 @@
+{
+  "directorio": [
+    {
+      "nombre": "Beatriz de Gregorio",
+      "cargo": "Matrona, Mg en Salud Pública. Profesional de Gendarmería",
+      "imagen": "images/92a9d9_0a458f7f264b4429b123c503e5188aad.png"
+    },
+    {
+      "nombre": "Benjamín Díaz Fernández",
+      "cargo": "Ingeniero Comercial Universidad de Chile, Socio fundador de Grupo Amoblé",
+      "imagen": "images/92a9d9_1385646ebefa47c9b880ba1a7dd07928.png"
+    },
+    {
+      "nombre": "Agustín Walker Martínez",
+      "cargo": "Abogado, Magíster en Derecho Penal. Profesor de la Pontificia Universidad Católica de Chile",
+      "imagen": "images/cb29d4_f992eb26693b423db469cc5836041287.jpg"
+    },
+    {
+      "nombre": "Ana María Izquierdo Walker",
+      "cargo": "Directora del Programa Productivo Pal'Alma. Profesora, Mg. en Orientación Familiar",
+      "imagen": "images/92a9d9_d35714cee26d44e892b88f51930a1377.png"
+    },
+    {
+      "nombre": "Claudia Morales Alcayaga",
+      "cargo": "Directora del Programa Abriendo Puertas en Libertad. Diseñadora Gráfica PUCV",
+      "imagen": "images/92a9d9_dc25c505f846460fb9e93e7a0106bcef.png"
+    },
+    {
+      "nombre": "Ana María Stuven Vattier",
+      "cargo": "Phd en Historia, Académica PUC/UDP",
+      "imagen": "images/92a9d9_140b53e49fcd414e8a4cdb676d4315c4.png"
+    },
+    {
+      "nombre": "Sebastián Valenzuela",
+      "cargo": "Mg. en Derecho Penal, Profesor PUC, UAI y UCEN. Ex-Subsecretario de Justicia",
+      "imagen": "images/92a9d9_6c722cfec1a14118a5029625994dff6d.png"
+    },
+    {
+      "nombre": "Roberto Walker Hitschfeld",
+      "cargo": "Ingeniero Comercial de la Universidad de Chile",
+      "imagen": "images/cb29d4_81b902153d8649e3b7f286b1f734fd48.jpg"
+    }
+  ],
+  "equipo": [
+    {
+      "nombre": "Loreto Martin Prunotto",
+      "cargo": "Directora Ejecutiva",
+      "imagen": "images/92a9d9_2bf71d37398e4645b1047e447879275e.png"
+    },
+    {
+      "nombre": "Luz María Gaete Munita",
+      "cargo": "Coordinadora de Voluntariado",
+      "imagen": "images/92a9d9_f089be47080847a0b7cd595ecdec1350.png"
+    },
+    {
+      "nombre": "José Luis Mojica Undurraga",
+      "cargo": "Encargado de Administración y Finanzas",
+      "imagen": "images/92a9d9_d857f7cee25c4d5580839f8fe22a426a.png"
+    },
+    {
+      "nombre": "Yamila Reyes Fuentes",
+      "cargo": "Coordinadora General",
+      "imagen": "images/92a9d9_60db88d694f84fffb05308bbd935ffe8.png"
+    }
+  ]
+}

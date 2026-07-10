@@ -1,0 +1,8 @@
+{
+  "admin": {
+    "nombre": "Administrador",
+    "email": "capcoordinador@gmail.com",
+    "password_hash": "$2y$12$jquhFvvCsK8c.QvA8FJdL.GHq03MsSzYJ.r8hSv1HXk8/EAfj.Dfq",
+    "rol": "admin"
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Celebraciones Artísticas durante el Mes de la Patria — Corporación Abriendo Puertas</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Open Sans',sans-serif; color:#333; background:#fff; }
+        a { color:#6EBE44; text-decoration:none; }
+        a:hover { text-decoration:underline; }
+
+        /* Header - matches original site */
+        .site-header {
+            background:#616161;
+            padding:0;
+            position:sticky; top:0; z-index:100;
+            box-shadow:0 0 5px rgba(0,0,0,0.7);
+        }
+        .site-header__inner {
+            display:flex; align-items:center; height:108px;
+            padding:0 100px;
+        }
+        .site-header__logo { flex-shrink:0; }
+        .site-header__logo img { height:100px; width:auto; }
+        .site-header__nav { display:flex; align-items:center; gap:2px; flex:1; justify-content:center; }
+        .site-header__nav a {
+            font-family:'Open Sans',sans-serif;
+            font-size:15px; font-weight:400; text-transform:uppercase;
+            color:#fff; padding:10px 14px;
+            transition:color .2s;
+        }
+        .site-header__nav a:hover { color:#6EBE44; text-decoration:none; }
+        .site-header__nav a.active { color:#6EBE44; }
+        .site-header__donate {
+            display:inline-flex; align-items:center;
+            background:#6EBE44;
+            color:#fff !important; padding:10px 18px;
+            border-radius:0; font-weight:400; font-size:15px;
+            transition:background .2s; flex-shrink:0;
+        }
+        .site-header__donate:hover { background:#5aa636; text-decoration:none; }
+
+        /* Post content */
+        .post-container { max-width:780px; margin:0 auto; padding:50px 24px 60px; }
+        .post-back { font-size:14px; color:#999; margin-bottom:28px; display:inline-block; }
+        .post-back:hover { color:#6EBE44; text-decoration:none; }
+        .post-title { font-size:34px; font-weight:700; line-height:1.3; margin-bottom:10px; color:#222; }
+        .post-date { font-size:14px; color:#999; margin-bottom:28px; }
+        .post-hero-img { margin-bottom:32px; border-radius:8px; overflow:hidden; }
+        .post-hero-img img { width:100%; height:auto; display:block; }
+        .post-body { font-size:16px; line-height:1.85; color:#444; }
+        .post-body p { margin-bottom:18px; }
+        .post-body img { max-width:100%; height:auto; border-radius:8px; margin:20px 0; }
+
+        /* Gallery */
+        .post-gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px; margin:36px 0; }
+        .post-gallery__item { border-radius:8px; overflow:hidden; }
+        .post-gallery__item img { width:100%; height:auto; display:block; }
+
+        /* Footer - matches original site */
+        .site-footer {
+            background:#616161; color:#fff;
+            padding:36px 24px 24px; margin-top:60px;
+        }
+        .site-footer__inner {
+            max-width:1100px; margin:0 auto;
+            display:flex; justify-content:space-between; align-items:flex-start;
+            flex-wrap:wrap; gap:30px;
+        }
+        .site-footer__newsletter { flex:1; min-width:250px; }
+        .site-footer__newsletter p { color:#6EBE44; font-size:16px; margin-bottom:12px; }
+        .site-footer__newsletter-form { display:flex; gap:0; }
+        .site-footer__newsletter-form input {
+            flex:1; padding:10px 14px; border:1px solid #888; border-right:none;
+            background:transparent; color:#fff; font-size:14px;
+            font-family:inherit; outline:none;
+        }
+        .site-footer__newsletter-form input::placeholder { color:#aaa; }
+        .site-footer__newsletter-form button {
+            padding:10px 20px; background:#6EBE44; color:#fff; border:none;
+            font-family:inherit; font-size:14px; cursor:pointer; transition:background .2s;
+        }
+        .site-footer__newsletter-form button:hover { background:#5aa636; }
+        .site-footer__contact { text-align:right; }
+        .site-footer__contact p { font-size:14px; color:#ddd; line-height:1.8; }
+        .site-footer__bottom {
+            max-width:1100px; margin:20px auto 0;
+            padding-top:16px; border-top:1px solid #888;
+            text-align:center; font-size:13px; color:#ccc;
+        }
+
+        /* Recent entries */
+        .recent-entries { max-width:780px; margin:0 auto; padding:0 24px 40px; }
+        .recent-entries__header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid #e0e0e0; }
+        .recent-entries__header h2 { font-size:20px; font-weight:700; color:#333; margin:0; }
+        .recent-entries__header a { font-size:14px; color:#6EBE44; }
+        .recent-entries__list { display:flex; flex-direction:column; gap:20px; }
+        .recent-entry { display:flex; gap:16px; text-decoration:none; color:inherit; }
+        .recent-entry:hover { text-decoration:none; }
+        .recent-entry__img { flex-shrink:0; width:180px; height:120px; border-radius:6px; overflow:hidden; }
+        .recent-entry__img img { width:100%; height:100%; object-fit:cover; }
+        .recent-entry__text { display:flex; flex-direction:column; justify-content:center; }
+        .recent-entry__title { font-size:16px; font-weight:600; color:#333; line-height:1.4; margin-bottom:6px; }
+        .recent-entry:hover .recent-entry__title { color:#6EBE44; }
+        .recent-entry__date { font-size:13px; color:#999; }
+
+        @media (max-width:768px) {
+            .site-header__nav { display:none; }
+            .site-header__inner { height:70px; }
+            .site-header__logo img { height:60px; }
+            .post-title { font-size:24px; }
+            .post-gallery { grid-template-columns:1fr; }
+            .site-footer__inner { flex-direction:column; }
+            .site-footer__contact { text-align:left; }
+            .recent-entry__img { width:120px; height:80px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="site-header__inner">
+        <a href="../index.html" class="site-header__logo">
+            <img src="../_wix_assets/59b3c6c9e029fd11.png" alt="Corporación Abriendo Puertas">
+        </a>
+        <nav class="site-header__nav">
+            <a href="../index.html">Inicio</a>
+            <a href="../nosotros.html">Nosotros</a>
+            <a href="../quehacemos.html">Qué Hacemos</a>
+            <a href="../noticias.html" class="active">Noticias</a>
+            <a href="../hazteparte.html">Hazte Parte</a>
+            <a href="../otec-promueve.html">OTEC - Promueve</a>
+        </nav>
+        <a href="https://abriendopuertas.donando.cl/" target="_blank" class="site-header__donate">DONAR AHORA<svg viewBox="0 0 65.63 60.33" xmlns="http://www.w3.org/2000/svg" width="22" height="20" style="vertical-align:middle;margin-left:6px;"><g><path d="M31.95 6.81c1.18-1 2.27-1.93 3.38-2.83C40.7-.35 46.6-1.16 52.88 1.6A21 21 0 0 1 65.6 22.24a20.71 20.71 0 0 1-6.06 13.72 3.39 3.39 0 0 1-2.75 1.05 5.88 5.88 0 0 1-6.11 5.16 6 6 0 0 1-1.73 4.38 5.81 5.81 0 0 1-4.28 1.62c-.7 4.28-1.81 5.38-6.09 6.12a18.57 18.57 0 0 1-.3 1.84 5.64 5.64 0 0 1-9.37 2.57c-7.71-7.65-15.46-15.25-23-23a21.19 21.19 0 0 1 7-34.14 16.18 16.18 0 0 1 17.88 4c.37.38.74.79 1.16 1.25Zm-2.16 1.8c-.41-.46-.75-.84-1.09-1.2a13.26 13.26 0 0 0-14.41-3.45 18.41 18.41 0 0 0-6.3 30c5.43 5.57 11 11 16.5 16.52 2.08 2.09 4.16 4.19 6.26 6.25a2.87 2.87 0 0 0 4.08 0 2.92 2.92 0 0 0 .05-4.09c-.3-.33-.63-.65-1-1-1.93-1.92-3.86-3.84-5.77-5.77a1.35 1.35 0 0 1 .36-2.3 1.47 1.47 0 0 1 1.7.45c2.14 2.17 4.3 4.32 6.46 6.48a2.86 2.86 0 0 0 2.59.93 2.74 2.74 0 0 0 2.34-2 2.82 2.82 0 0 0-.74-3c-2.21-2.21-4.42-4.41-6.62-6.63a1.37 1.37 0 0 1-.12-2 1.42 1.42 0 0 1 2.08.08l1 1c1.87 1.87 3.72 3.77 5.62 5.6a2.91 2.91 0 1 0 4-4.2c-1.99-2.11-4.18-4.23-6.28-6.4a2 2 0 0 1-.57-1.37 1.72 1.72 0 0 1 .86-1.08 1.3 1.3 0 0 1 1.55.43c2.19 2.2 4.37 4.4 6.58 6.58a2.91 2.91 0 1 0 4.09-4.13q-5.6-6.27-11.22-12.51c-1.29-1.44-2.59-2.87-3.93-4.35l-.7.52c-3.28 2.51-6.54 5-9.85 7.51a5.7 5.7 0 0 1-7-9c1-.8 1.95-1.6 2.91-2.41Zm33.09 11.72a18.23 18.23 0 0 0-8.51-14.82c-6-3.95-12.68-3.57-17.76 1-1.57 1.41-3.24 2.73-4.86 4.08l-9.63 8a2.83 2.83 0 0 0-1.15 2.92 2.87 2.87 0 0 0 4.65 1.71c3.74-2.82 7.45-5.67 11.17-8.52 1-.79 1.59-.77 2.47.19q2.47 2.7 4.93 5.42l12.21 13.4c.4.44.73.74 1.28.17a18.7 18.7 0 0 0 5.2-13.55Z" fill="#ffffff"/></g></svg></a>
+    </div>
+</header>
+
+<article class="post-container">
+    <a href="../noticias.html" class="post-back">&larr; Volver a noticias</a>
+    <h1 class="post-title">Celebraciones Artísticas durante el Mes de la Patria</h1>
+    <div class="post-date">25 de octubre de 2024</div>
+    <div class="post-hero-img"><img src="../_wix_assets/cb29d4_4ad9077c0e4d437db1b91d5f0ea9a741~mv2.jpg" alt="Celebraciones Artísticas durante el Mes de la Patria"></div>
+    <div class="post-body">
+        <p>El pasado miércoles 11 de septiembre se realizó una emocionante presentación artística, de dos talleres ejecutados en el CPF San Joaquín; “Taller de canto y voz” y “Taller de teatro” a cargo de las monitoras; Irmgard Carvajal, cantante solista, de la Fundación Agapi, y Barbara Álvarez y Javiera Vera, actrices. </p>
+<p>Durante el evento se presentaron una obra de teatro que relata sus experiencias en contexto carcelaria y una presentación de canto de música folklórica chilena. Además, contamos con</p>
+<p>la presencia de Funcionarias de Gendarmería, internas invitadas, Victoria de Gregorio, actriz, Patricio Poblete y  Isadora Campi de la Fundación Agapi. </p>
+    </div>
+    
+</article>
+
+<div class="recent-entries"><div class="recent-entries__header"><h2>Entradas recientes</h2><a href="../noticias.html">Ver todo</a></div><div class="recent-entries__list"><a href="lanzamiento-del-libro-salir-del-infierno-historias-de-mujeres-y-cárcel.html" class="recent-entry"><div class="recent-entry__img"><img src="../_wix_assets/cb29d4_f7638f837e7f4f6e95570f863a229149~mv2.jpg" alt="Lanzamiento del libro &quot;Salir del Infierno&quot;: Historias de mujeres y cárcel" loading="lazy"></div><div class="recent-entry__text"><div class="recent-entry__title">Lanzamiento del libro &quot;Salir del Infierno&quot;: Historias de mujeres y cárcel</div><div class="recent-entry__date">11 de agosto de 2025</div></div></a><a href="presentación-de-teatro-reinas-de-nada-1.html" class="recent-entry"><div class="recent-entry__img"><img src="../_wix_assets/cb29d4_f963765c6c734c9f82da0bacb179cb60~mv2.jpg" alt="Presentación de Teatro &quot;Reinas de Nada&quot;" loading="lazy"></div><div class="recent-entry__text"><div class="recent-entry__title">Presentación de Teatro &quot;Reinas de Nada&quot;</div><div class="recent-entry__date">11 de agosto de 2025</div></div></a><a href="día-de-la-reinserción-social-feria-malqueridas-centro-cultural-la-moneda.html" class="recent-entry"><div class="recent-entry__img"><img src="../_wix_assets/cb29d4_b68abec19cf94811a8c212ce96ed8ae3~mv2.jpeg" alt="Día de la Reinserción Social: Feria &quot;Malqueridas&quot; en el Centro Cultural La Moneda" loading="lazy"></div><div class="recent-entry__text"><div class="recent-entry__title">Día de la Reinserción Social: Feria &quot;Malqueridas&quot; en el Centro Cultural La Moneda</div><div class="recent-entry__date">11 de agosto de 2025</div></div></a></div></div>
+
+<footer class="site-footer">
+    <div class="site-footer__inner">
+        <div class="site-footer__newsletter">
+            <p>Suscr&iacute;bete a nuestra newsletter</p>
+            <div class="site-footer__newsletter-form">
+                <input type="email" placeholder="Ingresa tu email aqu&iacute;*">
+                <button type="button">Unirse</button>
+            </div>
+        </div>
+        <div class="site-footer__contact">
+            <p>capcoordinador@gmail.com</p>
+            <p>+562 2715 1262&nbsp;&nbsp;+569 6238 0925</p>
+            <p>Capitán Prat 20, San Joaquín, Santiago</p>
+        </div>
+    </div>
+    <div class="site-footer__bottom">© 2025 Corporación Abriendo Puertas</div>
+</footer>
+
+</body>
+</html>
