@@ -4,6 +4,14 @@ router.php
 # Claude Code
 .claude/
 
+# Old system (replaced)
+_data/
+admin_old/
+
+# Backups and test files
+*.wix-backup
+test-img.html
+
 # OS files
 .DS_Store
 Thumbs.db
