@@ -526,6 +526,20 @@ STYLE;
             }
         }
 
+        // Update FormSubmit email in ALL forms across the page
+        if ($formEmail) {
+            $newHtml = preg_replace(
+                '#(action="https://formsubmit\.co/)[^"]+#',
+                '${1}' . $formEmailSafe,
+                $html, -1, $emailCount
+            );
+            if ($emailCount > 0 && $newHtml !== $html) {
+                $html = $newHtml;
+                $changed = true;
+                $updateCount += $emailCount;
+            }
+        }
+
         if ($changed) {
             file_put_contents($filepath, $html);
             $results[] = ['file' => $filename, 'status' => 'ok', 'msg' => "$updateCount elementos actualizados"];
