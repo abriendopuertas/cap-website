@@ -418,7 +418,7 @@ STYLE;
 
             if (strpos($html, $contactMarker) !== false) {
                 $html = preg_replace(
-                    '/<div ' . preg_quote($contactMarker, '/') . '>.*?<\/div><!-- \/cap-form -->/s',
+                    '/<div ' . preg_quote($contactMarker, '/') . '>.*<!-- \/cap-form -->/s',
                     $contactFormHtml, $html, 1, $c
                 );
                 if ($c > 0) { $changed = true; $updateCount++; }
