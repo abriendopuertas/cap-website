@@ -4,3 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/$USER/public_html/
     - /bin/cp -R * $DEPLOYPATH
     - /bin/cp .htaccess $DEPLOYPATH 2>/dev/null; true
+    - cd $DEPLOYPATH && php admin/cli-publish.php
