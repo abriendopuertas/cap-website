@@ -19,3 +19,6 @@ Thumbs.db
 # Temp
 *.tmp
 *.swp
+
+# SQLite database (runtime data — don't overwrite live server)
+data/
